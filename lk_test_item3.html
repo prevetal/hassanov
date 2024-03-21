@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+		<!-- Adapting the page for mobile devices -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- Prohibition of phone number recognition -->
+		<meta name="format-detection" content="telephone=no">
+		<meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+
+		<!-- Page title -->
+		<title>Заголовок страницы</title>
+
+		<!-- Meta description -->
+		<meta name="description" content="">
+
+		<!-- Meta Keywords -->
+		<meta name="keywords" content="">
+
+		<!-- Changing the color of the mobile browser panel -->
+		<meta name="msapplication-TileColor" content="#D56BD0">
+		<meta name="theme-color" content="#D56BD0">
+
+		<!-- Connecting fonts from Google -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+		<!-- Connecting style files -->
+		<link rel="stylesheet" href="css/air-datepicker.css" async>
+		<link rel="stylesheet" href="css/styles.css" async>
+
+		<link rel="stylesheet" href="css/response_1439.css" media="print, (max-width: 1439px)" async>
+		<link rel="stylesheet" href="css/response_1279.css" media="print, (max-width: 1279px)" async>
+		<link rel="stylesheet" href="css/response_1023.css" media="print, (max-width: 1023px)" async>
+		<link rel="stylesheet" href="css/response_767.css" media="print, (max-width: 767px)" async>
+		<link rel="stylesheet" href="css/response_479.css" media="(max-width: 479px)" async>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="main">
+				<aside>
+					<div class="logo">
+						<img src="images/logo.png" alt="" loading="lazy">
+					</div>
+
+					<div class="lk_menu">
+						<div><a href="/">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_user"></use></svg>
+							<span>Мои данные</span>
+						</a></div>
+
+						<div><a class="active">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_list"></use></svg>
+							<span>Список анализов</span>
+						</a></div>
+					</div>
+				</aside>
+
+
+				<section class="content">
+					<div class="page_head">
+						<div class="back">
+							<a href="/">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_arr_hor"></use></svg>
+								<span>Вернуться назад</span>
+							</a>
+						</div>
+
+						<div class="btns">
+							<div class="profile">
+								<img src="images/tmp/avatar_img.jpg" alt="" loading="lazy">
+							</div>
+
+							<div class="notification">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_comment"></use></svg>
+							</div>
+
+							<button class="logout">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_logout"></use></svg>
+							</button>
+						</div>
+					</div>
+
+					<div class="test_info">
+						<div class="head">
+							<div class="title">Иванов Иван Иваныч</div>
+
+							<button class="save_btn">
+								<svg class="icon"><use xlink:href="images/sprite.svg#ic_file"></use></svg>
+								<span>Сохранить бланк в PDF</span>
+							</button>
+						</div>
+
+						<div class="user_info">
+							<div class="avatar">
+								<img src="images/tmp/avatar_img.jpg" alt="" loading="lazy">
+							</div>
+
+							<div>
+								<div class="row">
+									<div><span>ID</span> 123456789</div>
+									<div><span>Дата рождения:</span> 16.12.1995</div>
+									<div><span>Возраст:</span> 28 лет</div>
+									<div><span>Дата взятия:</span> 13.11.2023</div>
+									<div><span>Дата выполнения:</span> 22.11.2023</div>
+									<div><span>Биоматериал:</span> ХХХХХХХХХХХ</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="test_item_info">
+							<div class="nutrients tabs_container">
+								<div class="title big">Обзор необходимых нутриентов</div>
+
+								<div class="tabs">
+									<button data-content="#tab1" data-level="level1" class="btn active">Дисбаланс OMEGA</button>
+
+									<button data-content="#tab2" data-level="level1" class="btn">Витамины группы В</button>
+
+									<button data-content="#tab3" data-level="level1" class="btn">Минералы</button>
+
+									<button data-content="#tab4" data-level="level1" class="btn">Митохондриальная дисфункция</button>
+
+									<button data-content="#tab5" data-level="level1" class="btn">Микробиом и пищеварение</button>
+
+									<button data-content="#tab6" data-level="level1" class="btn">Нарушение метилирования</button>
+								</div>
+
+
+								<div class="tab_content level1 active" id="tab1">
+									<div class="head">
+										<div class="title">Дисбаланс OMEGA</div>
+
+										<div class="warning">
+											<svg class="icon"><use xlink:href="images/sprite.svg#ic_warning"></use></svg>
+											<span>Выявлен незначительный дефицит витаминов</span>
+										</div>
+									</div>
+
+									<div class="titles">
+										<div class="col_title">Антиоксиданты</div>
+										<div class="col_units">Ед. измерения</div>
+									</div>
+
+									<div class="list">
+										<div>
+											<div class="head">
+												<div class="progress">
+													<div class="val" style="left: 30%;"></div>
+												</div>
+
+												<div class="name">Витамин А</div>
+
+												<div class="col_units">3,000 IU</div>
+
+												<button class="spoler_btn">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_spoler_plus"></use></svg>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_spoler_minus"></use></svg>
+												</button>
+											</div>
+
+											<div class="data">
+												<div class="title">Интерпретация</div>
+
+												<div class="items">
+													<div class="blue">Бета-каротин и другие каротиноиды трансформируются в витамин А (ретинол), который участвует в процессах антиоксидантной, имунной функциях, зрения, экспрессии генов и росте клеток</div>
+
+													<div class="green">Дефицит витамина А может быть связан с хроническим алкоголизмом, дефицитом цинка, гипотиреозом или приемом оральных контрацептивов, содержащих экстроген и прогестин</div>
+
+													<div class="purple">В результате недостатка может развиваться нарушение сумеречного зрения ( “куриная” слепота), нарушение функции иммунной системы, регерации тканей, повышение риска инфекционных заболевании, лекоплакии, кератоза</div>
+
+													<div class="red">Пищевые источники: печень, злаки, молоко, яйца, сладкий картофель, тыква, морковь, дыня, манго, шпинат, брокколи, капуста, кабачки</div>
+												</div>
+
+												<div class="exp">
+													<div class="row">
+														<div class="blue">Функции</div>
+
+														<div class="green">Последствия дефицита</div>
+
+														<div class="purple">Пищевые источники</div>
+
+														<div class="red">Причины дефицита</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div>
+											<div class="head">
+												<div class="progress">
+													<div class="val" style="left: 50%;"></div>
+												</div>
+
+												<div class="name">Витамин C</div>
+
+												<div class="col_units">22 UI</div>
+
+												<button class="spoler_btn">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_spoler_plus"></use></svg>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_spoler_minus"></use></svg>
+												</button>
+											</div>
+
+											<div class="data">
+												<div class="title">Интерпретация</div>
+
+												<div class="items">
+													<div class="blue">Бета-каротин и другие каротиноиды трансформируются в витамин А (ретинол), который участвует в процессах антиоксидантной, имунной функциях, зрения, экспрессии генов и росте клеток</div>
+
+													<div class="green">Дефицит витамина А может быть связан с хроническим алкоголизмом, дефицитом цинка, гипотиреозом или приемом оральных контрацептивов, содержащих экстроген и прогестин</div>
+
+													<div class="purple">В результате недостатка может развиваться нарушение сумеречного зрения ( “куриная” слепота), нарушение функции иммунной системы, регерации тканей, повышение риска инфекционных заболевании, лекоплакии, кератоза</div>
+
+													<div class="red">Пищевые источники: печень, злаки, молоко, яйца, сладкий картофель, тыква, морковь, дыня, манго, шпинат, брокколи, капуста, кабачки</div>
+												</div>
+
+												<div class="exp">
+													<div class="row">
+														<div class="blue">Функции</div>
+
+														<div class="green">Последствия дефицита</div>
+
+														<div class="purple">Пищевые источники</div>
+
+														<div class="red">Причины дефицита</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div>
+											<div class="head">
+												<div class="progress">
+													<div class="val" style="left: 70%;"></div>
+												</div>
+
+												<div class="name">Витамин Е / Токоферолы</div>
+
+												<div class="col_units">90 mg</div>
+
+												<button class="spoler_btn">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_spoler_plus"></use></svg>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_spoler_minus"></use></svg>
+												</button>
+											</div>
+
+											<div class="data">
+												<div class="title">Интерпретация</div>
+
+												<div class="items">
+													<div class="blue">Бета-каротин и другие каротиноиды трансформируются в витамин А (ретинол), который участвует в процессах антиоксидантной, имунной функциях, зрения, экспрессии генов и росте клеток</div>
+
+													<div class="green">Дефицит витамина А может быть связан с хроническим алкоголизмом, дефицитом цинка, гипотиреозом или приемом оральных контрацептивов, содержащих экстроген и прогестин</div>
+
+													<div class="purple">В результате недостатка может развиваться нарушение сумеречного зрения ( “куриная” слепота), нарушение функции иммунной системы, регерации тканей, повышение риска инфекционных заболевании, лекоплакии, кератоза</div>
+
+													<div class="red">Пищевые источники: печень, злаки, молоко, яйца, сладкий картофель, тыква, морковь, дыня, манго, шпинат, брокколи, капуста, кабачки</div>
+												</div>
+
+												<div class="exp">
+													<div class="row">
+														<div class="blue">Функции</div>
+
+														<div class="green">Последствия дефицита</div>
+
+														<div class="purple">Пищевые источники</div>
+
+														<div class="red">Причины дефицита</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div>
+											<div class="head">
+												<div class="progress">
+													<div class="val" style="left: 15%;"></div>
+												</div>
+
+												<div class="name">а - липоевая к-та</div>
+
+												<div class="col_units">3,000 IU</div>
+
+												<button class="spoler_btn">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_spoler_plus"></use></svg>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_spoler_minus"></use></svg>
+												</button>
+											</div>
+
+											<div class="data">
+												<div class="title">Интерпретация</div>
+
+												<div class="items">
+													<div class="blue">Бета-каротин и другие каротиноиды трансформируются в витамин А (ретинол), который участвует в процессах антиоксидантной, имунной функциях, зрения, экспрессии генов и росте клеток</div>
+
+													<div class="green">Дефицит витамина А может быть связан с хроническим алкоголизмом, дефицитом цинка, гипотиреозом или приемом оральных контрацептивов, содержащих экстроген и прогестин</div>
+
+													<div class="purple">В результате недостатка может развиваться нарушение сумеречного зрения ( “куриная” слепота), нарушение функции иммунной системы, регерации тканей, повышение риска инфекционных заболевании, лекоплакии, кератоза</div>
+
+													<div class="red">Пищевые источники: печень, злаки, молоко, яйца, сладкий картофель, тыква, морковь, дыня, манго, шпинат, брокколи, капуста, кабачки</div>
+												</div>
+
+												<div class="exp">
+													<div class="row">
+														<div class="blue">Функции</div>
+
+														<div class="green">Последствия дефицита</div>
+
+														<div class="purple">Пищевые источники</div>
+
+														<div class="red">Причины дефицита</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div>
+											<div class="head">
+												<div class="progress">
+													<div class="val" style="left: 55%;"></div>
+												</div>
+
+												<div class="name">Коэнзим Q10</div>
+
+												<div class="col_units">22 UI</div>
+
+												<button class="spoler_btn">
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_spoler_plus"></use></svg>
+													<svg class="icon"><use xlink:href="images/sprite.svg#ic_spoler_minus"></use></svg>
+												</button>
+											</div>
+
+											<div class="data">
+												<div class="title">Интерпретация</div>
+
+												<div class="items">
+													<div class="blue">Бета-каротин и другие каротиноиды трансформируются в витамин А (ретинол), который участвует в процессах антиоксидантной, имунной функциях, зрения, экспрессии генов и росте клеток</div>
+
+													<div class="green">Дефицит витамина А может быть связан с хроническим алкоголизмом, дефицитом цинка, гипотиреозом или приемом оральных контрацептивов, содержащих экстроген и прогестин</div>
+
+													<div class="purple">В результате недостатка может развиваться нарушение сумеречного зрения ( “куриная” слепота), нарушение функции иммунной системы, регерации тканей, повышение риска инфекционных заболевании, лекоплакии, кератоза</div>
+
+													<div class="red">Пищевые источники: печень, злаки, молоко, яйца, сладкий картофель, тыква, морковь, дыня, манго, шпинат, брокколи, капуста, кабачки</div>
+												</div>
+
+												<div class="exp">
+													<div class="row">
+														<div class="blue">Функции</div>
+
+														<div class="green">Последствия дефицита</div>
+
+														<div class="purple">Пищевые источники</div>
+
+														<div class="red">Причины дефицита</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="tab_content level1" id="tab2">
+
+								</div>
+
+
+								<div class="tab_content level1" id="tab3">
+
+								</div>
+
+
+								<div class="tab_content level1" id="tab4">
+
+								</div>
+
+
+								<div class="tab_content level1" id="tab5">
+
+								</div>
+
+
+								<div class="tab_content level1" id="tab6">
+
+								</div>
+							</div>
+						</div>
+
+						<button class="mob_save_btn">
+							<svg class="icon"><use xlink:href="images/sprite.svg#ic_file"></use></svg>
+							<span>Сохранить бланк в PDF</span>
+						</button>
+					</div>
+				</section>
+			</div>
+		</div>
+
+
+		<!-- Connecting javascript files -->
+		<script src="js/jquery-3.6.3.min.js"></script>
+		<script src="js/functions.js"></script>
+		<script src="js/imask.js"></script>
+		<script src="js/air-datepicker.js"></script>
+		<script src="js/scripts.js"></script>
+	</body>
+</html>

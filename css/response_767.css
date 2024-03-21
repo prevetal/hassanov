@@ -1,0 +1,761 @@
+@media print,
+(max-width: 767px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    .cont
+    {
+        padding: 0 24px;
+    }
+
+
+
+    /*-------------
+        Sidebar
+    -------------*/
+    aside .lk_menu a
+    {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+    }
+
+
+
+    /*---------------
+        Page head
+    ---------------*/
+    .page_title
+    {
+        order: 2;
+
+        width: 100%;
+        margin-top: 20px;
+    }
+
+
+
+    /*-----------------
+        Select role
+    -----------------*/
+    .select_role .row
+    {
+        margin-left: 0;
+    }
+
+    .select_role .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+    .select_role .item
+    {
+        font-size: 22px;
+        line-height: 28px;
+
+        padding: 30px;
+    }
+
+
+    .select_role .item .thumb,
+    .select_role .item:hover .thumb
+    {
+        transform: scale(.7);
+    }
+
+
+
+    /*------------
+        Search
+    ------------*/
+    .search .icon
+    {
+        position: absolute;
+        z-index: 3;
+        top: 0;
+        bottom: 0;
+
+        margin: auto 0;
+
+        pointer-events: none;
+    }
+
+
+    .search .input
+    {
+        width: 24px;
+
+        transition: width .2s linear;
+
+        opacity: 0;
+    }
+
+
+    .search .input:focus
+    {
+        width: calc(100% - 40px);
+        padding-left: 40px;
+
+        opacity: 1;
+    }
+
+
+
+    /*-----------
+        Tests
+    -----------*/
+    .tests .titles
+    {
+        display: none;
+    }
+
+
+    .tests .test
+    {
+        padding: 24px 16px;
+
+        border-radius: 8px;
+        background: #f7f7f8;
+    }
+
+
+    .tests .test .head
+    {
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        padding: 0;
+
+        border-radius: 0;
+        background: none;
+    }
+
+
+    .tests .test .head > *
+    {
+        position: relative;
+
+        padding: 20px 0 0;
+    }
+
+    .tests .test .head > *:before
+    {
+        font-size: 12px;
+        line-height: 16px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        content: attr(data-column);
+
+        color: #67697e;
+    }
+
+
+    .tests .test + .test
+    {
+        margin-top: 16px;
+    }
+
+
+    .tests .test .col_type
+    {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+
+        order: 3;
+
+        margin-top: 16px;
+        padding-top: 36px;
+
+        border-top: 1px solid #edeef0;
+    }
+
+    .tests .test .col_type:before
+    {
+        font-weight: 400;
+
+        top: 16px;
+    }
+
+
+    .tests .test .col_status
+    {
+        order: 4;
+
+        margin-top: 16px;
+        padding: 0;
+    }
+
+
+    .tests .test .col_status:before
+    {
+        position: relative;
+
+        margin-right: 12px;
+    }
+
+
+    .tests .test .col_status span
+    {
+        padding: 0 0 0 16px;
+
+        border-radius: 0;
+        background: none !important;
+    }
+
+    .tests .test .col_status span.default
+    {
+        padding: 0;
+    }
+
+    .tests .test .col_status span:before
+    {
+        left: 0;
+    }
+
+
+    .tests .test .data
+    {
+        width: 100%;
+        margin: 16px 0 0;
+        padding: 0;
+
+        border: none;
+        border-radius: 0;
+        background: none;
+    }
+
+
+    .tests .test .data:before,
+    .tests .test .data:after
+    {
+        display: none;
+    }
+
+
+    .tests .test .item
+    {
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        padding: 16px;
+
+        border-radius: 4px;
+        background: #f8e7f7;
+    }
+
+
+    .tests .test .item > *
+    {
+        font-weight: 500;
+
+        position: relative;
+
+        padding: 20px 0 0;
+    }
+
+    .tests .test .item > *:before
+    {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        content: attr(data-column);
+
+        color: #67697e;
+    }
+
+
+    .tests .test .item .col_id
+    {
+        width: 116px;
+        min-width: 116px;
+    }
+
+
+    .tests .test .item .col_date
+    {
+        width: calc(100% - 136px);
+        min-width: calc(100% - 136px);
+    }
+
+
+    .tests .test .item .col_type
+    {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+
+    .tests .test .item .col_status
+    {
+        padding: 0;
+    }
+
+    .tests .test .item .col_status:before
+    {
+        position: relative;
+
+        margin-right: 12px;
+    }
+
+
+    .tests .col_id
+    {
+        width: 126px;
+        min-width: 126px;
+    }
+
+    .tests .col_date
+    {
+        width: calc(100% - 146px);
+        min-width: calc(100% - 146px);
+    }
+
+    .tests .col_type,
+    .tests .col_status
+    {
+        width: 100%;
+        min-width: 100%;
+    }
+
+
+
+    /*--------------
+        Patients
+    --------------*/
+    .patients .titles
+    {
+        display: none;
+    }
+
+
+    .patients .patient
+    {
+        padding: 24px 16px;
+
+        border-radius: 8px;
+        background: #f7f7f8;
+    }
+
+
+    .patients .patient .head
+    {
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        padding: 0;
+
+        border-radius: 0;
+        background: none;
+    }
+
+
+    .patients .patient .head > *
+    {
+        position: relative;
+
+        padding: 20px 0 0;
+    }
+
+    .patients .patient .head > *:before
+    {
+        font-size: 12px;
+        line-height: 16px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        content: attr(data-column);
+
+        color: #67697e;
+    }
+
+
+    .patients .patient + .patient
+    {
+        margin-top: 16px;
+    }
+
+
+    .patients .patient .col_patient
+    {
+        order: 3;
+
+        margin-top: 16px;
+        padding-top: 36px;
+
+        border-top: 1px solid #edeef0;
+    }
+
+    .patients .patient .col_patient:before
+    {
+        font-weight: 400;
+
+        top: 16px;
+    }
+
+
+    .patients .patient .col_patient .photo
+    {
+        display: none;
+    }
+
+
+    .patients .patient .col_patient .name
+    {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+
+        margin: 0;
+    }
+
+
+    .patients .patient .col_type
+    {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 32px;
+
+        order: 3;
+
+        margin-top: 16px;
+        padding-top: 36px;
+
+        border-top: 1px solid #edeef0;
+    }
+
+    .patients .patient .col_type:before
+    {
+        font-weight: 400;
+
+        top: 16px;
+    }
+
+
+    .patients .patient .col_status
+    {
+        order: 4;
+
+        margin-top: 16px;
+        padding: 0;
+    }
+
+
+    .patients .patient .col_status:before
+    {
+        position: relative;
+
+        margin-right: 12px;
+    }
+
+
+    .patients .patient .col_status span
+    {
+        padding: 0 0 0 16px;
+
+        border-radius: 0;
+        background: none !important;
+    }
+
+    .patients .patient .col_status span.default
+    {
+        padding: 0;
+    }
+
+    .patients .patient .col_status span:before
+    {
+        left: 0;
+    }
+
+
+    .patients .patient .data
+    {
+        width: 100%;
+        margin: 16px 0 0;
+        padding: 0;
+
+        border: none;
+        border-radius: 0;
+        background: none;
+    }
+
+
+    .patients .patient .data:before,
+    .patients .patient .data:after
+    {
+        display: none;
+    }
+
+
+    .patients .patient .item
+    {
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        padding: 16px;
+
+        border-radius: 4px;
+        background: #f8e7f7;
+    }
+
+
+    .patients .patient .item > *
+    {
+        font-weight: 500;
+
+        position: relative;
+
+        padding: 20px 0 0;
+    }
+
+    .patients .patient .item > *:before
+    {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        display: block;
+
+        content: attr(data-column);
+
+        color: #67697e;
+    }
+
+
+    .patients .patient .item .col_patient
+    {
+        display: none;
+    }
+
+
+    .patients .patient .item .col_id
+    {
+        width: 116px;
+        min-width: 116px;
+    }
+
+
+    .patients .patient .item .col_date
+    {
+        width: calc(100% - 136px);
+        min-width: calc(100% - 136px);
+    }
+
+
+    .patients .patient .item .col_type
+    {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 22px;
+    }
+
+
+    .patients .patient .item .col_status
+    {
+        padding: 0;
+    }
+
+    .patients .patient .item .col_status:before
+    {
+        position: relative;
+
+        margin-right: 12px;
+    }
+
+
+    .patients .col_id
+    {
+        width: 126px;
+        min-width: 126px;
+    }
+
+    .patients .col_date
+    {
+        width: calc(100% - 146px);
+        min-width: calc(100% - 146px);
+    }
+
+    .patients .col_type,
+    .patients .col_status,
+    .patients .col_patient
+    {
+        width: 100%;
+        min-width: 100%;
+    }
+
+
+
+    /*---------------
+        Test info
+    ---------------*/
+    .test_info .head
+    {
+        margin-bottom: 28px;
+    }
+
+
+    .test_info .head .save_btn
+    {
+        display: none;
+    }
+
+
+
+    .test_info .data .row
+    {
+        margin-left: 0;
+    }
+
+    .test_info .data .row > *
+    {
+        width: 100%;
+        margin-left: 0;
+    }
+
+
+
+    .test_info .mob_save_btn
+    {
+        display: flex;
+    }
+
+
+
+    /*---------------
+        User info
+    ---------------*/
+    .user_info
+    {
+        margin-bottom: 28px;
+    }
+
+
+
+    /*--------------------
+        Test item info
+    --------------------*/
+    .test_item_info .data .row
+    {
+        margin-bottom: -8px;
+        margin-left: -8px;
+    }
+
+    .test_item_info .data .row > *
+    {
+        width: calc(50% - 8px);
+        max-width: calc(50% - 8px);
+        margin-bottom: 8px;
+        margin-left: 8px;
+    }
+
+
+
+    .test_item_info .nutrients .title
+    {
+        font-weight: 500;
+    }
+
+
+    .test_item_info .nutrients .row
+    {
+        margin-bottom: -24px;
+        margin-left: 0;
+    }
+
+    .test_item_info .nutrients .row > *
+    {
+        width: 100%;
+        margin-bottom: 24px;
+        margin-left: 0;
+    }
+
+
+
+    .test_item_info .nutrients .titles
+    {
+        padding-right: 40px;
+    }
+
+
+    .test_item_info .nutrients .head
+    {
+        flex-wrap: wrap;
+    }
+
+    .test_item_info .nutrients .head > *
+    {
+        order: 2;
+    }
+
+
+    .test_item_info .nutrients .warning
+    {
+        width: 100%;
+        margin-top: 12px;
+        margin-left: 0;
+        padding: 0;
+
+        border: none;
+    }
+
+
+    .test_item_info .nutrients .list .head
+    {
+        flex-wrap: wrap;
+    }
+
+
+    .test_item_info .nutrients .list .name
+    {
+        order: 1;
+
+        width: 100%;
+        padding: 0;
+    }
+
+
+    .test_item_info .nutrients .list .col_units
+    {
+        margin-left: auto;
+    }
+
+
+    .test_item_info .nutrients .list .spoler_btn
+    {
+        margin-left: 16px;
+    }
+
+
+
+    /*------------
+        Schema
+    ------------*/
+    .schema iframe
+    {
+        height: 440px;
+    }
+}

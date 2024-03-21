@@ -1,0 +1,177 @@
+@media (max-width: 479px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    .cont
+    {
+        padding: 0 20px;
+    }
+
+
+    .content
+    {
+        padding: 40px 20px 90px;
+    }
+
+
+
+    /*-------------
+        Sidebar
+    -------------*/
+    aside .lk_menu
+    {
+        padding: 0 20px;
+    }
+
+
+    aside .lk_menu a
+    {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+
+
+    /*----------
+        Auth
+    ----------*/
+    .auth
+    {
+        padding: 48px 0;
+    }
+
+
+    .auth .title
+    {
+        margin-bottom: 32px;
+    }
+
+
+
+    /*-----------------
+        Select role
+    -----------------*/
+    .select_role
+    {
+        padding: 48px 0;
+    }
+
+
+    .select_role .title
+    {
+        margin-bottom: 32px;
+    }
+
+
+    .select_role .item
+    {
+        font-size: 20px;
+        line-height: 26px;
+    }
+
+
+    .select_role .item .thumb,
+    .select_role .item:hover .thumb
+    {
+        transform: scale(.6);
+    }
+
+
+
+    /*---------------
+        Test info
+    ---------------*/
+    .test_info .head
+    {
+        margin-bottom: 24px;
+    }
+
+
+
+    .test_info .data .row
+    {
+        margin-bottom: -20px;
+    }
+
+
+    .test_info .data .row > *
+    {
+        margin-bottom: 20px;
+    }
+
+
+
+    /*---------------
+        User info
+    ---------------*/
+    .user_info
+    {
+        margin-bottom: 24px;
+    }
+
+
+    .user_info .row
+    {
+        margin-bottom: -4px;
+    }
+
+    .user_info .row > *
+    {
+        margin-bottom: 4px;
+    }
+
+
+
+    /*--------------------
+        Test item info
+    --------------------*/
+    .test_item_info .grid .row
+    {
+        margin-bottom: -16px;
+        margin-left: -13px;
+    }
+
+
+    .test_item_info .grid .row > *
+    {
+        margin-bottom: 16px;
+        margin-left: 13px;
+    }
+
+
+
+    .test_item_info .data .row
+    {
+        margin-bottom: -8px;
+        margin-left: 0;
+    }
+
+    .test_item_info .data .row > *
+    {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 8px;
+        margin-left: 0;
+    }
+
+
+
+    .test_item_info .nutrients .titles
+    {
+        padding-right: 32px;
+    }
+
+
+    .test_item_info .nutrients .col_units
+    {
+        width: 104px;
+        min-width: 104px;
+    }
+
+
+    .test_item_info .nutrients .list .spoler_btn
+    {
+        margin-left: 8px;
+    }
+}

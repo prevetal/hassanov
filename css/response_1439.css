@@ -1,0 +1,159 @@
+@media print,
+(max-width: 1439px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --font_size_title: 44px;
+    }
+
+
+
+    /*-------------
+        Sidebar
+    -------------*/
+    aside .lk_menu
+    {
+        padding: 28px 24px;
+    }
+
+
+    aside .lk_menu > * + *
+    {
+        margin-top: 20px;
+        padding-top: 20px;
+    }
+
+
+    aside .lk_menu a
+    {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+
+
+    /*----------
+        Auth
+    ----------*/
+    .auth
+    {
+        padding: 60px 0;
+    }
+
+
+    .auth .data
+    {
+        padding: 0 60px;
+    }
+
+
+    .auth .image
+    {
+        height: 836px;
+    }
+
+
+    .auth .title
+    {
+        margin-bottom: 48px;
+    }
+
+
+
+    /*-----------------
+        Select role
+    -----------------*/
+    .select_role
+    {
+        padding: 60px 0;
+    }
+
+
+    .select_role .title
+    {
+        margin-bottom: 48px;
+    }
+
+
+    .select_role .item
+    {
+        font-size: 28px;
+
+        height: 480px;
+        padding: 40px;
+    }
+
+
+
+    /*-----------
+        Tests
+    -----------*/
+    .tests .col_id,
+    .tests .col_status
+    {
+        width: 220px;
+        min-width: 220px;
+    }
+
+
+    .tests .test .item .col_id
+    {
+        width: 188px;
+        min-width: 188px;
+    }
+
+
+
+    /*--------------
+        Patients
+    --------------*/
+    .patients .col_id,
+    .patients .col_status
+    {
+        width: 148px;
+        min-width: 148px;
+    }
+
+
+    .patients .col_type
+    {
+        width: 240px;
+        min-width: 240px;
+    }
+
+
+
+    /*--------------------
+        Test item info
+    --------------------*/
+    .test_item_info
+    {
+        padding-top: 0;
+    }
+
+
+    .test_item_info .grid .title
+    {
+        margin-bottom: 28px;
+    }
+
+
+    .test_item_info .data .row > *
+    {
+        width: calc(25% - 8px);
+        max-width: calc(25% - 8px);
+    }
+
+
+
+    /*------------
+        Schema
+    ------------*/
+    .schema iframe
+    {
+        height: 520px;
+    }
+}

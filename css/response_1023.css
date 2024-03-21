@@ -1,0 +1,154 @@
+@media print,
+(max-width: 1023px)
+{
+    /*-------------------
+        Global styles
+    -------------------*/
+    :root
+    {
+        --sidebar_width: 100%;
+    }
+
+
+
+    .content
+    {
+        padding: 40px 24px 90px;
+    }
+
+
+
+    /*-------------
+        Sidebar
+    -------------*/
+    aside
+    {
+        top: auto;
+        bottom: 0;
+
+        height: auto;
+        min-height: 0;
+
+        background: #fff;
+    }
+
+
+    aside .logo
+    {
+        display: none;
+    }
+
+
+
+    aside .lk_menu
+    {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        padding: 0 24px;
+    }
+
+
+    aside .lk_menu > *
+    {
+        width: 50%;
+    }
+
+
+    aside .lk_menu > * + *
+    {
+        margin: 0;
+        padding: 0;
+
+        border: none;
+    }
+
+
+    aside .lk_menu a
+    {
+        justify-content: center;
+
+        padding: 12px;
+
+        border-top: 2px solid transparent;
+    }
+
+
+    aside .lk_menu span
+    {
+        width: auto;
+        margin-left: 8px;
+    }
+
+
+    aside .lk_menu a.active
+    {
+        border-color: currentColor;
+    }
+
+
+
+    /*----------
+        Auth
+    ----------*/
+    .auth .data
+    {
+        width: 100%;
+        padding: 0;
+    }
+
+
+    .auth .image
+    {
+        display: none;
+    }
+
+
+
+    /*-----------------
+        Select role
+    -----------------*/
+    .select_role .row
+    {
+        margin-bottom: -24px;
+        margin-left: -24px;
+    }
+
+    .select_role .row > *
+    {
+        width: calc(50% - 24px);
+        margin-bottom: 24px;
+        margin-left: 24px;
+    }
+
+
+    .select_role .item
+    {
+        font-size: 24px;
+        line-height: 30px;
+
+        height: 320px;
+        padding: 28px;
+    }
+
+
+    .select_role .item .thumb,
+    .select_role .item:hover .thumb
+    {
+        transform: scale(.6);
+    }
+
+
+
+    /*--------------------
+        Test item info
+    --------------------*/
+    .test_item_info .nutrients .title
+    {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}
