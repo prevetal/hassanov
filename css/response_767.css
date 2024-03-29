@@ -609,28 +609,28 @@
 
 
 
-    /*---------------
-        Test info
-    ---------------*/
-    .test_info .head
+    /*-------------
+        LK info
+    -------------*/
+    .lk_info .head
     {
         margin-bottom: 28px;
     }
 
 
-    .test_info .head .save_btn
+    .lk_info .head .save_btn
     {
         display: none;
     }
 
 
 
-    .test_info .data .row
+    .lk_info .data .row
     {
         margin-left: 0;
     }
 
-    .test_info .data .row > *
+    .lk_info .data .row > *
     {
         width: 100%;
         margin-left: 0;
@@ -638,7 +638,7 @@
 
 
 
-    .test_info .mob_save_btn
+    .lk_info .mob_save_btn
     {
         display: flex;
     }
@@ -651,6 +651,18 @@
     .user_info
     {
         margin-bottom: 28px;
+    }
+
+
+    .user_info .row > *:nth-child(3) ~ *
+    {
+        width: calc(100% + 68px);
+        margin-left: -68px;
+    }
+
+    .user_info .row > *:nth-child(4)
+    {
+        margin-top: 8px;
     }
 
 

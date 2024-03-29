@@ -600,60 +600,6 @@ aside .lk_menu a.active
 
 
 
-/*----------------
-    Block head
-----------------*/
-.block_head
-{
-    display: flex;
-    align-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-
-    width: 100%;
-    margin-bottom: 40px;
-}
-
-
-.block_head .title
-{
-    font-size: var(--font_size_title);
-    font-weight: 700;
-    line-height: calc(100% + 6px);
-
-    display: block;
-}
-
-
-.block_head .desc
-{
-    width: 100%;
-    max-width: 100%;
-    margin-top: 12px;
-}
-
-
-.block_head.center
-{
-    justify-content: center;
-
-    text-align: center;
-}
-
-.block_head.center .title
-{
-    width: 100%;
-}
-
-.block_head.center .desc
-{
-    margin-right: auto;
-    margin-left: auto;
-}
-
-
-
 /*------------------
     Form elements
 ------------------*/
@@ -1712,9 +1658,9 @@ aside .lk_menu a.active
 
 
 
-/*---------------
-    Test info
----------------*/
+/*-------------
+    LK info
+-------------*/
 .test_info
 {
     padding-top: 24px;
@@ -1723,7 +1669,7 @@ aside .lk_menu a.active
 }
 
 
-.test_info .head
+.lk_info .head
 {
     display: flex;
     align-content: center;
@@ -1735,7 +1681,7 @@ aside .lk_menu a.active
 }
 
 
-.test_info .head .title
+.lk_info .head .title
 {
     font-size: 32px;
     font-weight: 700;
@@ -1743,7 +1689,7 @@ aside .lk_menu a.active
 }
 
 
-.test_info .head .save_btn
+.lk_info .head .save_btn
 {
     font-size: 16px;
     line-height: 24px;
@@ -1754,11 +1700,13 @@ aside .lk_menu a.active
     flex-wrap: wrap;
     justify-content: flex-start;
 
+    transition: .2s linear;
+
     color: #7e7e7e;
 }
 
 
-.test_info .head .save_btn .icon
+.lk_info .head .save_btn .icon
 {
     display: block;
 
@@ -1768,8 +1716,14 @@ aside .lk_menu a.active
 }
 
 
+.lk_info .head .save_btn:hover
+{
+    color: #d56bd0;
+}
 
-.test_info .data .row
+
+
+.lk_info .data .row
 {
     align-content: stretch;
     align-items: stretch;
@@ -1778,7 +1732,7 @@ aside .lk_menu a.active
     margin-left: -32px;
 }
 
-.test_info .data .row > *
+.lk_info .data .row > *
 {
     width: calc(50% - 32px);
     margin-bottom: 32px;
@@ -1786,7 +1740,7 @@ aside .lk_menu a.active
 }
 
 
-.test_info .data .item
+.lk_info .data .item
 {
     position: relative;
 
@@ -1801,7 +1755,7 @@ aside .lk_menu a.active
 }
 
 
-.test_info .data .item .name
+.lk_info .data .item .name
 {
     font-size: 24px;
     font-weight: 500;
@@ -1809,7 +1763,7 @@ aside .lk_menu a.active
 }
 
 
-.test_info .data .item .link
+.lk_info .data .item .link
 {
     display: flex;
 
@@ -1818,7 +1772,7 @@ aside .lk_menu a.active
 }
 
 
-.test_info .data .item .link a
+.lk_info .data .item .link a
 {
     display: flex;
     align-content: center;
@@ -1826,13 +1780,14 @@ aside .lk_menu a.active
     flex-wrap: wrap;
     justify-content: flex-start;
 
+    transition: color .2s linear;
     text-decoration: none;
 
     color: #67697e;
 }
 
 
-.test_info .data .item .link .icon
+.lk_info .data .item .link .icon
 {
     display: block;
 
@@ -1842,8 +1797,14 @@ aside .lk_menu a.active
 }
 
 
+.lk_info .data .item .link a:hover
+{
+    color: #d56bd0;
+}
 
-.test_info .mob_save_btn
+
+
+.lk_info .mob_save_btn
 {
     font-size: 16px;
     line-height: 24px;
@@ -1864,7 +1825,7 @@ aside .lk_menu a.active
 }
 
 
-.test_info .mob_save_btn .icon
+.lk_info .mob_save_btn .icon
 {
     display: block;
 
@@ -2220,9 +2181,16 @@ aside .lk_menu a.active
 
 .test_item_info .nutrients .link a
 {
+    transition: color .2s linear;
     text-decoration: none;
 
     color: currentColor;
+}
+
+
+.test_item_info .nutrients .link a:hover
+{
+    color: #d56bd0;
 }
 
 
@@ -2656,41 +2624,4 @@ aside .lk_menu a.active
 
     width: 28px;
     height: 28px;
-}
-
-
-
-/*-----------
-    PopUp
------------*/
-.modal
-{
-    display: none;
-    visibility: visible !important;
-
-    width: 480px;
-    max-width: 100%;
-    padding: 40px 50px;
-
-    color: var(--text_color);
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, .3);
-}
-
-
-.modal_title
-{
-    font-size: var(--font_size_title);
-    font-weight: 700;
-    line-height: normal;
-
-    text-align: center;
-}
-
-
-.modal_desc
-{
-    margin-top: 24px;
-
-    text-align: center;
 }

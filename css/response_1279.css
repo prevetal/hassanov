@@ -160,29 +160,29 @@
 
 
 
-    /*---------------
-        Test info
-    ---------------*/
+    /*-------------
+        LK info
+    -------------*/
     .test_info
     {
         padding-top: 20px;
     }
 
 
-    .test_info .head
+    .lk_info .head
     {
         margin-bottom: 32px;
     }
 
 
 
-    .test_info .data .row
+    .lk_info .data .row
     {
         margin-bottom: -24px;
         margin-left: -24px;
     }
 
-    .test_info .data .row > *
+    .lk_info .data .row > *
     {
         width: calc(50% - 24px);
         margin-bottom: 24px;
@@ -190,7 +190,7 @@
     }
 
 
-    .test_info .data .item .name br
+    .lk_info .data .item .name br
     {
         display: none;
     }

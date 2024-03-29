@@ -79,23 +79,23 @@
 
 
 
-    /*---------------
-        Test info
-    ---------------*/
-    .test_info .head
+    /*-------------
+        LK info
+    -------------*/
+    .lk_info .head
     {
         margin-bottom: 24px;
     }
 
 
 
-    .test_info .data .row
+    .lk_info .data .row
     {
         margin-bottom: -20px;
     }
 
 
-    .test_info .data .row > *
+    .lk_info .data .row > *
     {
         margin-bottom: 20px;
     }
