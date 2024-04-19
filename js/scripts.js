@@ -123,6 +123,89 @@ document.addEventListener('DOMContentLoaded', function () {
 			})
 		})
 	}
+
+
+	// Schema
+	let scale = 1
+
+	$('.schema .btns .zoom_in_btn').click(function(e) {
+		e.preventDefault()
+
+		scale = scale + 0.1
+
+		$('.schema .data').css('transform', 'scale('+ scale +')')
+	})
+
+	$('.schema .btns .zoom_out_btn').click(function(e) {
+		e.preventDefault()
+
+		scale = scale - 0.1
+
+		$('.schema .data').css('transform', 'scale('+ scale +')')
+	})
+
+	$('.schema .btns .fullscreen_btn, .schema .btns .close_btn').click(function(e) {
+		e.preventDefault()
+
+		$('.schema').toggleClass('fullscreen')
+	})
+
+
+	// Free drag
+	var draggable = document.getElementById('draggable'),
+		mouseX, mouseY, startX, startY,
+		isDragging = false
+
+	// Function to get the correct event coordinates (mouse or touch)
+	function getEventCoords(e) {
+		if (e.touches && e.touches.length) {
+			return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+		} else {
+			return { x: e.clientX, y: e.clientY };
+		}
+	}
+
+	// Start dragging
+	function startDragging(e) {
+		e.preventDefault()
+
+		let event = (e.type === 'touchstart') ? e.touches[0] : e,
+			styles = window.getComputedStyle(draggable)
+
+		isDragging = true
+
+		mouseX = event.clientX
+		mouseY = event.clientY
+
+		startX = parseFloat(styles.getPropertyValue('left'))
+		startY = parseFloat(styles.getPropertyValue('top'))
+	}
+
+	draggable.addEventListener('mousedown', startDragging)
+	draggable.addEventListener('touchstart', startDragging)
+
+	draggable.addEventListener('mousemove', e => {
+		if (isDragging) {
+			let offsetX = (mouseX - e.clientX) * -1,
+				offsetY = (mouseY - e.clientY) * -1
+
+			draggable.style.left = startX + offsetX + 'px'
+			draggable.style.top = startY + offsetY + 'px'
+		}
+	})
+
+	draggable.addEventListener('touchmove', e => {
+		if (isDragging) {
+			let offsetX = (mouseX - e.touches[0].clientX) * -1,
+				offsetY = (mouseY - e.touches[0].clientY) * -1
+
+			draggable.style.left = startX + offsetX + 'px'
+			draggable.style.top = startY + offsetY + 'px'
+		}
+	})
+
+	draggable.addEventListener('mouseup', () => isDragging = false)
+	document.addEventListener('touchend', () => isDragging = false)
 })
 
 

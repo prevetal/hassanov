@@ -152,8 +152,20 @@
     /*------------
         Schema
     ------------*/
-    .schema iframe
+    .schema
     {
+        padding: 16px;
+    }
+
+
+    .schema .btns
+    {
+        margin-top: 32px;
+    }
+
+
+    .schema .data_wrap {
+        width: calc(100% - 48px);
         height: 520px;
     }
 }
