@@ -156,14 +156,14 @@ document.addEventListener('DOMContentLoaded', function () {
 		mouseX, mouseY, startX, startY,
 		isDragging = false
 
-	// Function to get the correct event coordinates (mouse or touch)
-	function getEventCoords(e) {
-		if (e.touches && e.touches.length) {
-			return { x: e.touches[0].clientX, y: e.touches[0].clientY };
-		} else {
-			return { x: e.clientX, y: e.clientY };
-		}
-	}
+	// // Function to get the correct event coordinates (mouse or touch)
+	// function getEventCoords(e) {
+	// 	if (e.touches && e.touches.length) {
+	// 		return { x: e.touches[0].clientX, y: e.touches[0].clientY };
+	// 	} else {
+	// 		return { x: e.clientX, y: e.clientY };
+	// 	}
+	// }
 
 	// Start dragging
 	function startDragging(e) {
@@ -181,31 +181,82 @@ document.addEventListener('DOMContentLoaded', function () {
 		startY = parseFloat(styles.getPropertyValue('top'))
 	}
 
-	draggable.addEventListener('mousedown', startDragging)
-	draggable.addEventListener('touchstart', startDragging)
+	if (draggable) {
+		draggable.addEventListener('mousedown', startDragging)
+		draggable.addEventListener('touchstart', startDragging)
 
-	draggable.addEventListener('mousemove', e => {
-		if (isDragging) {
-			let offsetX = (mouseX - e.clientX) * -1,
-				offsetY = (mouseY - e.clientY) * -1
+		draggable.addEventListener('mousemove', e => {
+			if (isDragging) {
+				let offsetX = (mouseX - e.clientX) * -1,
+					offsetY = (mouseY - e.clientY) * -1
 
-			draggable.style.left = startX + offsetX + 'px'
-			draggable.style.top = startY + offsetY + 'px'
-		}
+				draggable.style.left = startX + offsetX + 'px'
+				draggable.style.top = startY + offsetY + 'px'
+			}
+		})
+
+		draggable.addEventListener('touchmove', e => {
+			if (isDragging) {
+				let offsetX = (mouseX - e.touches[0].clientX) * -1,
+					offsetY = (mouseY - e.touches[0].clientY) * -1
+
+				draggable.style.left = startX + offsetX + 'px'
+				draggable.style.top = startY + offsetY + 'px'
+			}
+		})
+
+		draggable.addEventListener('mouseup', () => isDragging = false)
+		document.addEventListener('touchend', () => isDragging = false)
+	}
+
+
+	// Fancybox
+	Fancybox.defaults.autoFocus = false
+	Fancybox.defaults.trapFocus = false
+	Fancybox.defaults.dragToClose = false
+	Fancybox.defaults.placeFocusBack = false
+	Fancybox.defaults.l10n = {
+		CLOSE: 'Закрыть',
+		NEXT: 'Следующий',
+		PREV: 'Предыдущий',
+		MODAL: 'Вы можете закрыть это модальное окно нажав клавишу ESC'
+	}
+
+	Fancybox.defaults.tpl = {
+		closeButton: '<button data-fancybox-close class="f-button is-close-btn" title="{{CLOSE}}"><svg><use xlink:href="images/sprite.svg#ic_close"></use></svg></button>',
+
+		main: `<div class="fancybox__container" role="dialog" aria-modal="true" aria-label="{{MODAL}}" tabindex="-1">
+			<div class="fancybox__backdrop"></div>
+			<div class="fancybox__carousel"></div>
+			<div class="fancybox__footer"></div>
+		</div>`,
+	}
+
+
+	// Modals
+	$('.modal_btn').click(function(e) {
+		e.preventDefault()
+
+		Fancybox.close()
+
+		Fancybox.show([{
+			src: document.getElementById(e.target.getAttribute('data-modal')),
+			type: 'inline'
+		}])
 	})
 
-	draggable.addEventListener('touchmove', e => {
-		if (isDragging) {
-			let offsetX = (mouseX - e.touches[0].clientX) * -1,
-				offsetY = (mouseY - e.touches[0].clientY) * -1
 
-			draggable.style.left = startX + offsetX + 'px'
-			draggable.style.top = startY + offsetY + 'px'
-		}
+	// LK profile
+	$('.lk_profile .form .edit_btn').click(function(e) {
+		e.preventDefault()
+
+		let form = $(this).closest('form')
+
+		$(this).addClass('active')
+
+		form.find('.input').prop('readonly', false)
+		form.find('.submit_btn').prop('disabled', false)
 	})
-
-	draggable.addEventListener('mouseup', () => isDragging = false)
-	document.addEventListener('touchend', () => isDragging = false)
 })
 
 

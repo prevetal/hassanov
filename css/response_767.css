@@ -11,6 +11,16 @@
 
 
 
+    /*--------------
+        Fancybox
+    --------------*/
+    .fancybox__slide
+    {
+        padding: 20px;
+    }
+
+
+
     /*-------------
         Sidebar
     -------------*/
@@ -812,5 +822,23 @@
     .schema.fullscreen .btns
     {
         padding: 12px;
+    }
+
+
+
+    /*----------------
+        LK profile
+    ----------------*/
+    .lk_profile .head .avatar
+    {
+        margin: 0 auto 16px;
+    }
+
+
+    .lk_profile .head .avatar + *
+    {
+        width: 100%;
+
+        text-align: center;
     }
 }

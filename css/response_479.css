@@ -174,4 +174,45 @@
     {
         margin-left: 8px;
     }
+
+
+
+    /*----------------
+        LK profile
+    ----------------*/
+    .lk_profile .head,
+    .lk_profile .section
+    {
+        padding: 24px 16px;
+    }
+
+
+    .lk_profile .form .submit_btn
+    {
+        width: 100%;
+    }
+
+
+    .lk_profile .form .edit_btn
+    {
+        width: 100%;
+        margin-top: 12px;
+        margin-left: 0;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        padding: 24px 16px;
+    }
+
+
+    .modal_title
+    {
+        padding-right: 40px;
+    }
 }

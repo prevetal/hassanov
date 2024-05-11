@@ -231,6 +231,12 @@ button
 }
 
 
+.modal_btn > *
+{
+    pointer-events: none;
+}
+
+
 
 /*----------
     Tabs
@@ -335,7 +341,59 @@ button
 ----------------*/
 .air-datepicker
 {
+    z-index: 10000;
+
     --adp-day-name-color: #d56bd0;
+}
+
+
+
+/*--------------
+    Fancybox
+--------------*/
+.fancybox__backdrop
+{
+    background: rgba(0, 0, 0, .56);
+}
+
+
+.fancybox__slide
+{
+    padding: 40px;
+}
+
+
+.fancybox__content > .f-button.is-close-btn,
+.is-compact .fancybox__content > .f-button.is-close-btn
+{
+    top: 40px;
+    right: 32px;
+
+    opacity: 1;
+
+    --f-button-width: 32px;
+    --f-button-height: 32px;
+    --f-button-border-radius: 0;
+    --f-button-color: #919191;
+    --f-button-hover-color: #000;
+    --f-button-svg-width: 32px;
+    --f-button-svg-height: 32px;
+    --f-button-bg: transparent;
+    --f-button-hover-bg: transparent;
+    --f-button-active-bg: transparent;
+}
+
+
+.is-compact .fancybox__content > .f-button.is-close-btn
+{
+    top: 24px;
+    right: 16px;
+}
+
+
+.fancybox__content > .f-button.is-close-btn svg
+{
+    stroke: none;
 }
 
 
@@ -498,8 +556,6 @@ aside .lk_menu a.active
     line-height: 48px;
 
     display: block;
-
-    color: #2b2b2b;
 }
 
 
@@ -844,6 +900,79 @@ aside .lk_menu a.active
 }
 
 
+.form .radio
+{
+    font-size: 16px;
+    line-height: 24px;
+
+    position: relative;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    min-height: 24px;
+    padding-left: 32px;
+
+    cursor: pointer;
+}
+
+
+.form .radio input
+{
+    display: none;
+}
+
+
+.form .radio .check
+{
+    position: absolute;
+    top: 2px;
+    left: 2px;
+
+    width: 20px;
+    height: 20px;
+
+    color: #a4abb5;
+    border: 2px solid;
+    border-radius: 50%;
+}
+
+
+.form .radio .check:before
+{
+    position: absolute;
+
+    display: block;
+
+    width: 8px;
+    height: 8px;
+    margin: auto;
+
+    content: '';
+    transition: opacity .2s linear;
+
+    opacity: 0;
+    border-radius: 50%;
+    background: currentColor;
+
+    inset: 0;
+}
+
+
+.form .radio input:checked ~ .check
+{
+    color: #d56bd0;
+}
+
+.form .radio input:checked ~ .check:before
+{
+    opacity: 1;
+}
+
+
 .form .submit
 {
     padding-top: 8px;
@@ -860,9 +989,70 @@ aside .lk_menu a.active
     width: 100%;
     padding: 17px 24px;
 
+    transition: .2s linear;
+
     color: #fff;
     border-radius: 8px;
     background: #d56bd0;
+}
+
+
+.form .submit_btn:disabled
+{
+    pointer-events: none;
+
+    background: #a4abb5;
+}
+
+
+.form .forgot
+{
+    font-size: 18px;
+    line-height: 22px;
+
+    margin-top: 16px;
+
+    text-align: center;
+
+    color: #67697e;
+}
+
+
+.form .forgot a
+{
+    color: #d56bd0;
+}
+
+
+.form .forgot a:hover
+{
+    text-decoration: none;
+}
+
+
+.form .have_account
+{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 22px;
+
+    margin-top: 16px;
+
+    text-align: center;
+
+    color: #67697e;
+}
+
+
+.form .have_account a
+{
+    color: #d56bd0;
+}
+
+
+.form .have_account a:hover
+{
+    text-decoration: none;
 }
 
 
@@ -884,7 +1074,7 @@ aside .lk_menu a.active
 
     width: 50%;
     max-width: 100%;
-    padding: 0 64px 0 84px;
+    padding: 0 64px;
 }
 
 
@@ -972,17 +1162,22 @@ aside .lk_menu a.active
 {
     font-size: 32px;
     font-weight: 500;
-    line-height: 40px;
+    line-height: calc(100% + 8px);
 
     position: relative;
 
-    display: block;
+    display: flex;
     overflow: hidden;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
+    width: 100%;
     height: 525px;
     padding: 48px;
 
-    text-decoration: none;
+    text-align: left;
 
     color: #67697e;
     border-radius: 16px;
@@ -2128,7 +2323,12 @@ aside .lk_menu a.active
     line-height: 22px;
 
     width: 180px;
-    max-width: 100%;
+    max-width: calc(100% - 88px);
+}
+
+.test_item_info .nutrients .name.big_w
+{
+    width: 251px;
 }
 
 
@@ -3895,4 +4095,335 @@ aside .lk_menu a.active
 
     margin-top: 0;
     margin-left: 20px;
+}
+
+
+
+/*----------------
+    LK profile
+----------------*/
+.lk_profile
+{
+    padding-top: 40px;
+
+    border-top: 1px solid #e6e6f9;
+}
+
+
+.lk_profile .head
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+    padding: 24px;
+
+    border-radius: 16px;
+    background: #f7f7f8;
+}
+
+
+.lk_profile .head .avatar
+{
+    position: relative;
+
+    overflow: hidden;
+
+    width: 100px;
+    height: 100px;
+
+    border-radius: 16px;
+    background: #ddd;
+}
+
+
+.lk_profile .head .avatar img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+.lk_profile .head .avatar + *
+{
+    align-self: center;
+
+    width: calc(100% - 116px);
+}
+
+
+.lk_profile .head .name
+{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: calc(100% + 8px);
+}
+
+
+.lk_profile .head .change_avatar_btn
+{
+    line-height: 24px;
+
+    display: inline-block;
+
+    margin-top: 8px;
+
+    cursor: pointer;
+    transition: color .2s linear;
+    vertical-align: top;
+
+    color: #a4abb5;
+}
+
+
+.lk_profile .head .change_avatar_btn input
+{
+    display: none;
+}
+
+
+.lk_profile .head .change_avatar_btn:hover
+{
+    color: #000;
+}
+
+
+.lk_profile .section
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding: 24px;
+
+    border-radius: 16px;
+    background: #f7f7f8;
+}
+
+
+.lk_profile .section + .section
+{
+    margin-top: 20px;
+}
+
+
+.lk_profile .block_title
+{
+    font-size: 24px;
+    font-weight: 600;
+    line-height: calc(100% + 8px);
+
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    white-space: nowrap;
+}
+
+
+.lk_profile .block_title .icon
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
+
+    border-radius: 50%;
+    background: #edeef0;
+}
+
+
+.lk_profile .block_title .icon  svg
+{
+    display: block;
+
+    width: 24px;
+    height: 24px;
+}
+
+
+.lk_profile .block_title span
+{
+    align-self: center;
+
+    max-width: calc(100% - 56px);
+}
+
+
+.lk_profile .form
+{
+    width: 559px;
+    max-width: 100%;
+    margin-left: auto;
+
+    --form_border_color: #a4abb5;
+    --form_focus_color: #a4abb5;
+    --form_border_radius: 0;
+    --form_bg_color: none;
+}
+
+
+.lk_profile .form .input
+{
+    height: 40px;
+    padding-right: 0;
+    padding-bottom: 15px;
+    padding-left: 0;
+
+    border-top: none;
+    border-right: none;
+    border-left: none;
+}
+
+
+.lk_profile .form .gender
+{
+    display: flex;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    margin-left: -24px;
+}
+
+
+.lk_profile .form .gender .field
+{
+    margin-left: 24px;
+}
+
+
+.lk_profile .form .toggle_btn
+{
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    margin: 0;
+}
+
+
+.lk_profile .form .submit
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    padding-top: 16px;
+}
+
+
+.lk_profile .form .submit_btn
+{
+    width: auto;
+}
+
+
+.lk_profile .form .edit_btn
+{
+    font-size: 18px;
+    line-height: 22px;
+
+    display: block;
+
+    margin-left: 12px;
+    padding: 16px 23px;
+
+    color: #d56bd0;
+    border: 1px solid #d56bd0;
+    border-radius: 8px;
+    background: #fff;
+}
+
+
+
+/*-----------
+    PopUp
+-----------*/
+.modal
+{
+    display: none;
+    visibility: visible !important;
+
+    width: 664px;
+    max-width: 100%;
+    padding: 40px 32px;
+
+    color: var(--text_color);
+    border-radius: 16px;
+    background: #fff;
+}
+
+
+.modal_title
+{
+    font-size: 32px;
+    font-weight: 600;
+    line-height: calc(100% + 8px);
+
+    padding-right: 48px;
+}
+
+
+.modal_desc
+{
+    font-size: 18px;
+    line-height: 22px;
+
+    width: 568px;
+    max-width: 100%;
+    margin-top: 16px;
+
+    color: #67697e;
+}
+
+
+.modal .form
+{
+    margin-top: 40px;
+}
+
+
+
+/*--------------------------------
+    PopUp - Role confirm modal
+--------------------------------*/
+#role_confirm_modal .btn
+{
+    font-size: 18px;
+    line-height: 22px;
+
+    display: block;
+
+    width: 100%;
+    margin-top: 40px;
+    padding: 17px 24px;
+
+    color: #fff;
+    border-radius: 8px;
+    background: #d56bd0;
 }

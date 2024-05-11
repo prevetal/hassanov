@@ -30,6 +30,7 @@
 
 		<!-- Connecting style files -->
 		<link rel="stylesheet" href="css/air-datepicker.css" async>
+		<link rel="stylesheet" href="css/fancybox.css" async>
 		<link rel="stylesheet" href="css/styles.css" async>
 
 		<link rel="stylesheet" href="css/response_1439.css" media="print, (max-width: 1439px)" async>
@@ -47,17 +48,17 @@
 						<div class="title">Выберите роль</div>
 
 						<div class="row">
-							<div><a href="/" class="item">
+							<div><button class="item modal_btn" data-modal="role_confirm_modal">
 								<div class="name">Пациент</div>
 
 								<img src="images/tmp/select_role_thumb1.png" alt="" loading="lazy" class="thumb">
-							</a></div>
+							</button></div>
 
-							<div><a href="/" class="item">
+							<div><button class="item modal_btn" data-modal="role_confirm_modal">
 								<div class="name">Врач</div>
 
 								<img src="images/tmp/select_role_thumb2.png" alt="" loading="lazy" class="thumb">
-							</a></div>
+							</button></div>
 						</div>
 					</div>
 				</section>
@@ -65,9 +66,19 @@
 		</div>
 
 
+		<section class="modal" id="role_confirm_modal">
+			<div class="modal_title">Подтверждение роли</div>
+
+			<div class="modal_desc">Роль выбирается единожды. В дальнейшем не получится сменить роль</div>
+
+			<button class="btn">Подтверждаю</button>
+		</section>
+
+
 		<!-- Connecting javascript files -->
 		<script src="js/jquery-3.6.3.min.js"></script>
 		<script src="js/functions.js"></script>
+		<script src="js/fancybox.js"></script>
 		<script src="js/imask.js"></script>
 		<script src="js/air-datepicker.js"></script>
 		<script src="js/scripts.js"></script>
