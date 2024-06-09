@@ -29,6 +29,8 @@
 		<link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
 		<!-- Connecting style files -->
+		<link rel="stylesheet" href="css/swiper-bundle.min.css" async>
+		<link rel="stylesheet" href="css/swiper.css" async>
 		<link rel="stylesheet" href="css/air-datepicker.css" async>
 		<link rel="stylesheet" href="css/fancybox.css" async>
 		<link rel="stylesheet" href="css/styles.css" async>
@@ -117,18 +119,56 @@
 							<div class="nutrients tabs_container">
 								<div class="title big">Обзор необходимых нутриентов</div>
 
-								<div class="tabs">
-									<button data-content="#tab1" data-level="level1" class="btn active">Дисбаланс OMEGA</button>
+								<div class="swiper tabs">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<button data-content="#tab1" data-level="level1" class="btn active">Дисбаланс OMEGA</button>
+										</div>
 
-									<button data-content="#tab2" data-level="level1" class="btn">Витамины группы В</button>
+										<div class="swiper-slide">
+											<button data-content="#tab2" data-level="level1" class="btn">Витамины группы В</button>
+										</div>
 
-									<button data-content="#tab3" data-level="level1" class="btn">Минералы</button>
+										<div class="swiper-slide">
+											<button data-content="#tab3" data-level="level1" class="btn">Минералы</button>
+										</div>
 
-									<button data-content="#tab4" data-level="level1" class="btn">Митохондриальная дисфункция</button>
+										<div class="swiper-slide">
+											<button data-content="#tab4" data-level="level1" class="btn">Митохондриальная дисфункция</button>
+										</div>
 
-									<button data-content="#tab5" data-level="level1" class="btn">Микробиом и пищеварение</button>
+										<div class="swiper-slide">
+											<button data-content="#tab5" data-level="level1" class="btn">Микробиом и пищеварение</button>
+										</div>
 
-									<button data-content="#tab6" data-level="level1" class="btn">Нарушение метилирования</button>
+										<div class="swiper-slide">
+											<button data-content="#tab6" data-level="level1" class="btn">Нарушение метилирования</button>
+										</div>
+
+										<div class="swiper-slide">
+											<button data-content="#tab1" data-level="level1" class="btn active">Дисбаланс OMEGA</button>
+										</div>
+
+										<div class="swiper-slide">
+											<button data-content="#tab2" data-level="level1" class="btn">Витамины группы В</button>
+										</div>
+
+										<div class="swiper-slide">
+											<button data-content="#tab3" data-level="level1" class="btn">Минералы</button>
+										</div>
+
+										<div class="swiper-slide">
+											<button data-content="#tab4" data-level="level1" class="btn">Митохондриальная дисфункция</button>
+										</div>
+
+										<div class="swiper-slide">
+											<button data-content="#tab5" data-level="level1" class="btn">Микробиом и пищеварение</button>
+										</div>
+
+										<div class="swiper-slide">
+											<button data-content="#tab6" data-level="level1" class="btn">Нарушение метилирования</button>
+										</div>
+									</div>
 								</div>
 
 
@@ -407,6 +447,7 @@
 		<script src="js/functions.js"></script>
 		<script src="js/fancybox.js"></script>
 		<script src="js/imask.js"></script>
+		<script src="js/swiper-bundle.min.js"></script>
 		<script src="js/air-datepicker.js"></script>
 		<script src="js/scripts.js"></script>
 	</body>

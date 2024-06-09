@@ -4,6 +4,27 @@ BODY = document.getElementsByTagName('body')[0]
 
 
 document.addEventListener('DOMContentLoaded', function () {
+	// Nutrients slider
+	const nutrientsTabsSliders = [],
+		nutrientsTabs = document.querySelectorAll('.test_item_info .nutrients .swiper')
+
+	nutrientsTabs.forEach((el, i) => {
+		el.classList.add('nutrients_tabs_s' + i)
+
+		let options = {
+			loop: false,
+			speed: 500,
+			watchSlidesProgress: true,
+			slideActiveClass: 'active',
+			slideVisibleClass: 'visible',
+			spaceBetween: 8,
+			slidesPerView: 'auto'
+		}
+
+		nutrientsTabsSliders.push(new Swiper('.nutrients_tabs_s' + i, options))
+	})
+
+
 	// Input password
 	$('.form .toggle_btn').click(function(e) {
 		e.preventDefault()
@@ -46,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Tests
-	$('.tests .test .head').click(function(e) {
+	$('body').on('click', '.tests .test .head', function (e) {
 		e.preventDefault()
 
 		let parent = $(this).closest('.test')
@@ -57,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Patients
-	$('.patients .patient .head').click(function(e) {
+	$('body').on('click', '.patients .patient .head', function (e) {
 		e.preventDefault()
 
 		let parent = $(this).closest('.patient')
@@ -68,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Test info - nutrients - list
-	$('.test_item_info .nutrients .list .spoler_btn').click(function(e) {
+	$('body').on('click', '.test_item_info .nutrients .list .spoler_btn', function (e) {
 		e.preventDefault()
 
 		$(this).toggleClass('active').closest('.head').next().slideToggle(300)

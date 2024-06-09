@@ -243,34 +243,7 @@ button
 ----------*/
 .tabs
 {
-    display: block;
-    overflow: auto;
-
-    width: calc(100% + 72px);
-    margin: 0 -40px 32px -32px;
-    padding: 0 40px 0 32px;
-
-    white-space: nowrap;
-
-    scroll-padding: 0 40px 0 32px;
-    scroll-snap-type: x mandatory;
-    scrollbar-color: transparent transparent !important;
-    scrollbar-width: thin !important;
-}
-
-.tabs::-webkit-scrollbar
-{
-    display: none !important;
-
-    width: 0 !important;
-    height: 0 !important;
-
-    background-color: transparent !important;
-}
-
-.tabs::-webkit-scrollbar-thumb
-{
-    background-color: transparent !important;
+    margin-bottom: 32px;
 }
 
 
@@ -288,12 +261,6 @@ button
     color: #7e7e7e;
     border-radius: 8px;
     background: #f8f8f8;
-}
-
-
-.tabs .btn + .btn
-{
-    margin-left: 4px;
 }
 
 
@@ -546,6 +513,90 @@ aside .lk_menu a.active
     width: 18px;
     height: 18px;
     margin-right: 8px;
+}
+
+
+
+.breadcrumbs
+{
+    font-size: 14px;
+    line-height: 18px;
+
+    display: block;
+    overflow: auto;
+
+    width: calc(100% - 128px);
+    margin: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    color: #a4abb5;
+
+    scroll-padding: 0 0;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: transparent transparent !important;
+    scrollbar-width: thin !important;
+}
+
+
+.breadcrumbs::-webkit-scrollbar
+{
+    display: none !important;
+
+    width: 0 !important;
+    height: 0 !important;
+
+    background-color: transparent !important;
+}
+
+
+.breadcrumbs::-webkit-scrollbar-thumb
+{
+    background-color: transparent !important;
+}
+
+
+.breadcrumbs > *
+{
+    display: inline-block;
+
+    max-width: none;
+    margin: 0;
+
+    vertical-align: top;
+
+    scroll-snap-align: start;
+}
+
+.breadcrumbs > * + *
+{
+    margin-left: 4px;
+}
+
+
+.breadcrumbs a
+{
+    text-decoration: none;
+
+    color: #d1d5da;
+}
+
+
+.breadcrumbs .sep
+{
+    position: relative;
+    top: -1px;
+
+    display: inline-block;
+
+    width: 5px;
+    height: 5px;
+
+    vertical-align: middle;
+
+    border-radius: 50%;
+    background: #d1d5da;
 }
 
 
@@ -1492,6 +1543,10 @@ aside .lk_menu a.active
     align-items: center;
     flex-wrap: nowrap;
     justify-content: flex-start;
+
+    text-decoration: none;
+
+    color: currentColor;
 }
 
 .tests .test .item + .item
@@ -1791,6 +1846,10 @@ aside .lk_menu a.active
     align-items: center;
     flex-wrap: nowrap;
     justify-content: flex-start;
+
+    text-decoration: none;
+
+    color: currentColor;
 }
 
 .patients .patient .item + .item
@@ -2395,6 +2454,19 @@ aside .lk_menu a.active
 
 
 
+.test_item_info .nutrients .swiper
+{
+    overflow: visible !important;
+}
+
+
+.test_item_info .nutrients .swiper-slide
+{
+    width: auto;
+}
+
+
+
 .test_item_info .nutrients .head
 {
     display: flex;
@@ -2537,7 +2609,7 @@ aside .lk_menu a.active
     height: 8px;
 
     border-radius: 4px;
-    background: linear-gradient(90deg, #ff6c60 0%, #ffd809 42.67%, #00b04c 100%);
+    background: linear-gradient(90deg, #ff6c60 0%, #ffd809 25%, #00b04c 50%, #ffd809 75%, #ff6c60 100%);
 }
 
 
@@ -2971,13 +3043,16 @@ aside .lk_menu a.active
     display: flex;
     align-content: center;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    gap: 4px;
 }
 
 .schema .data .items .text3 img
 {
-    display: block;
+    display: none;
 
     margin-left: 15px;
 }
@@ -3007,13 +3082,16 @@ aside .lk_menu a.active
     display: flex;
     align-content: center;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    gap: 3px;
 }
 
 .schema .data .items .text5 img
 {
-    display: block;
+    display: none;
 
     margin-left: 15px;
 }
@@ -3077,6 +3155,15 @@ aside .lk_menu a.active
 {
     top: 317px;
     left: 711px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 3px;
 }
 
 
@@ -3084,6 +3171,15 @@ aside .lk_menu a.active
 {
     top: 317px;
     left: 1085px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 3px;
 }
 
 .schema .data .items .text13
@@ -3162,8 +3258,11 @@ aside .lk_menu a.active
     display: flex;
     align-content: center;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    gap: 3px;
 }
 
 .schema .data .items .text19 img
@@ -3198,8 +3297,11 @@ aside .lk_menu a.active
     display: flex;
     align-content: center;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    gap: 3px;
 }
 
 .schema .data .items .text21 img
@@ -3217,8 +3319,11 @@ aside .lk_menu a.active
     display: flex;
     align-content: center;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    gap: 3px;
 }
 
 .schema .data .items .text22 img
@@ -3299,8 +3404,11 @@ aside .lk_menu a.active
     display: flex;
     align-content: center;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    gap: 3px;
 }
 
 .schema .data .items .text27 img
@@ -3315,6 +3423,15 @@ aside .lk_menu a.active
 {
     top: 970px;
     left: 1162px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 3px;
 }
 
 
@@ -3373,8 +3490,11 @@ aside .lk_menu a.active
     display: flex;
     align-content: center;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    gap: 3px;
 }
 
 .schema .data .items .text32 img
@@ -3393,8 +3513,11 @@ aside .lk_menu a.active
     display: flex;
     align-content: center;
     align-items: center;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: flex-start;
+
+    gap: 3px;
 }
 
 .schema .data .items .text33 img
@@ -3470,6 +3593,15 @@ aside .lk_menu a.active
 {
     top: 1284px;
     left: 727px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 3px;
 }
 
 
@@ -3477,6 +3609,15 @@ aside .lk_menu a.active
 {
     top: 1284px;
     left: 1049px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    gap: 3px;
 }
 
 
@@ -4097,7 +4238,67 @@ aside .lk_menu a.active
     margin-left: 20px;
 }
 
+.schema .data .items span.triangle:before
+{
+    position: absolute;
+    right: -35px;
 
+    margin-top: -1px;
+
+    content: '';
+
+    border: 8px solid transparent;
+    border-bottom: 14px solid transparent;
+}
+.schema .data .items .red_up,
+.schema .data .items .red_down
+{
+    color: #e42b34;
+}
+.schema .data .items .red_up span.triangle:before
+{
+    border-bottom: 14px solid  #e42b34;
+}
+.schema .data .items .red_down span.triangle:before
+{
+    top: 9px;
+
+    border-top: 14px solid #e42b34;
+}
+.schema .data .items .red_down .org,
+.schema .data .items .red_up .org
+{
+    background: #e42b34;
+}
+.schema .data .items .yellow_up,
+.schema .data .items .yellow_down
+{
+    color: #e8a92c;
+}
+.schema .data .items .yellow_up span.triangle:before
+{
+    border-bottom: 14px solid  #e8a92c;
+}
+.schema .data .items .yellow_down span.triangle:before
+{
+    top: 9px;
+
+    border-top: 14px solid #e8a92c;
+}
+.schema .data .items .yellow_down .org,
+.schema .data .items .yellow_up .org
+{
+    background: #e8a92c;
+}
+.schema .data .items .normal_value
+{
+    color: #79bd38;
+}
+
+.schema .data .items .normal_value .org
+{
+    background: #79bd38;
+}
 
 /*----------------
     LK profile
@@ -4357,6 +4558,185 @@ aside .lk_menu a.active
     border: 1px solid #d56bd0;
     border-radius: 8px;
     background: #fff;
+}
+
+
+
+/*----------------
+    Indicators
+----------------*/
+.indicators .block_title
+{
+    font-size: 32px;
+    font-weight: 700;
+    line-height: calc(100% + 8px);
+
+    margin-bottom: 32px;
+
+    color: #2b2b2b;
+}
+
+
+.indicators .titles
+{
+    line-height: 18px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    width: 780px;
+    max-width: 100%;
+    margin-bottom: 16px;
+    padding: 0 16px;
+
+    border-radius: 8px;
+    background: #ecf3fa;
+}
+
+
+.indicators .titles > *
+{
+    padding: 15px 0;
+}
+
+
+.indicators .titles > * + *
+{
+    margin-left: 24px;
+}
+
+
+.indicators .titles .col_unit_change
+{
+    text-align: center;
+}
+
+
+.indicators .list
+{
+    width: 780px;
+    max-width: 100%;
+}
+
+
+.indicators .list > *
+{
+    font-size: 14px;
+    line-height: 18px;
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+
+    padding: 0 16px;
+
+    color: #67697e;
+}
+
+
+.indicators .list > * + *
+{
+    margin-top: 16px;
+    padding-top: 16px;
+
+    border-top: 1px solid #e6e6f9;
+}
+
+
+.indicators .list > * > *
+{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+
+.indicators .list > * > * + *
+{
+    margin-left: 24px;
+}
+
+
+.indicators .list .col_value
+{
+    text-align: center;
+}
+
+
+.indicators .list .progress
+{
+    position: relative;
+
+    width: 112px;
+    min-width: 112px;
+    height: 8px;
+
+    border-radius: 4px;
+    background: linear-gradient(90deg, #ff6c60 0%, #ffd809 25%, #00b04c 50%, #ffd809 75%, #ff6c60 100%);
+}
+
+
+.indicators .list .progress .val
+{
+    position: absolute;
+    top: -3px;
+    left: 0;
+
+    width: 14px;
+    height: 14px;
+    margin-left: -7px;
+
+    border-radius: 50%;
+    background: #67697e;
+}
+
+
+.indicators .list .col_unit_change
+{
+    text-align: center;
+}
+
+
+.indicators .col_id
+{
+    width: 56px;
+    min-width: 56px;
+}
+
+.indicators .col_name
+{
+    width: 100%;
+}
+
+.indicators .col_value
+{
+    width: 66px;
+    min-width: 66px;
+}
+
+.indicators .col_type
+{
+    width: 112px;
+    min-width: 112px;
+}
+
+.indicators .col_reference
+{
+    width: 104px;
+    min-width: 104px;
+}
+
+.indicators .col_unit_change
+{
+    width: 98px;
+    min-width: 98px;
 }
 
 

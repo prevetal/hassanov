@@ -33,6 +33,20 @@
 
 
 
+    /*---------------
+        Page head
+    ---------------*/
+    .breadcrumbs
+    {
+        width: calc(100% - 108px);
+        margin-left: -20px;
+        padding-left: 20px;
+
+        scroll-padding: 0 0 0 20px;
+    }
+
+
+
     /*----------
         Auth
     ----------*/
@@ -198,6 +212,22 @@
         width: 100%;
         margin-top: 12px;
         margin-left: 0;
+    }
+
+
+
+    /*----------------
+        Indicators
+    ----------------*/
+    .indicators
+    {
+        padding-top: 24px;
+    }
+
+
+    .indicators .block_title
+    {
+        font-size: 24px;
     }
 
 

@@ -24,20 +24,6 @@
 
 
 
-    /*----------
-        Tabs
-    ----------*/
-    .tabs
-    {
-        width: calc(100% + 64px);
-        margin: 0 -32px 32px;
-        padding: 0 32px;
-
-        scroll-padding: 0 32px;
-    }
-
-
-
     /*--------------
         Fancybox
     --------------*/
@@ -302,5 +288,22 @@
     .lk_profile .form
     {
         width: 100%;
+    }
+
+
+
+    /*----------------
+        Indicators
+    ----------------*/
+    .indicators .titles > * + *,
+    .indicators .list > * > * + *
+    {
+        margin-left: 20px;
+    }
+
+
+    .indicators .list .val
+    {
+        margin-right: 20px;
     }
 }
