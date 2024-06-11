@@ -108,6 +108,7 @@ input[type=number]
     --font_size: 14px;
     --font_size_title: 48px;
     --font_family: 'Rubik', 'Arial', sans-serif;
+    --font_family2: 'Inter', 'Arial', sans-serif;
 }
 
 
@@ -2851,6 +2852,8 @@ aside .lk_menu a.active
 
 .schema .data_wrap
 {
+    font-family: var(--font_family2);
+
     position: relative;
 
     overflow: hidden;
