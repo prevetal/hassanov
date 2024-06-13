@@ -2194,13 +2194,23 @@ aside .lk_menu a.active
 }
 
 
-.test_item_info .grid .row > *:nth-child(2n)
+.test_item_info .grid .row
 {
-    margin-top: 72px;
+    margin-bottom: -40px;
+    margin-left: -8px;
 }
 
 
-.test_item_info .grid .item
+.test_item_info .grid .row > *
+{
+    width: 220px;
+    max-width: calc(20% - 8px);
+    margin-bottom: 40px;
+    margin-left: 8px;
+}
+
+
+.test_item_info .grid .head
 {
     font-size: 12px;
     line-height: 16px;
@@ -2213,6 +2223,7 @@ aside .lk_menu a.active
 
     width: 161px;
     min-height: 123px;
+    margin: 0 auto;
     padding: 23px 20px 20px;
 
     text-align: center;
@@ -2221,7 +2232,7 @@ aside .lk_menu a.active
 }
 
 
-.test_item_info .grid .item .val
+.test_item_info .grid .head .val
 {
     font-size: 32px;
     line-height: 40px;
@@ -2230,49 +2241,26 @@ aside .lk_menu a.active
 }
 
 
-.test_item_info .grid .item .val.red
+.test_item_info .grid .head .val.red
 {
     color: #f00;
 }
 
-.test_item_info .grid .item .val.green
+.test_item_info .grid .head .val.green
 {
     color: #1acd8c;
 }
 
-.test_item_info .grid .item .val.yellow
+.test_item_info .grid .head .val.yellow
 {
     color: #fbb401;
 }
 
 
 
-.test_item_info .data
+.test_item_info .grid .info
 {
-    margin-top: 40px;
-}
-
-
-.test_item_info .data .row
-{
-    align-content: stretch;
-    align-items: stretch;
-
-    margin-bottom: -8px;
-    margin-left: -8px;
-}
-
-.test_item_info .data .row > *
-{
-    width: 220px;
-    max-width: calc(20% - 8px);
-    margin-bottom: 8px;
-    margin-left: 8px;
-}
-
-
-.test_item_info .data .col
-{
+    margin-top: 24px;
     padding: 15px;
 
     border: 1px solid #edeef0;
@@ -2280,7 +2268,7 @@ aside .lk_menu a.active
 }
 
 
-.test_item_info .data .title
+.test_item_info .grid .info .title
 {
     font-size: 16px;
     font-weight: 500;
@@ -2290,14 +2278,14 @@ aside .lk_menu a.active
 }
 
 
-.test_item_info .data .items
+.test_item_info .grid .info .items
 {
     font-size: 12px;
     line-height: 16px;
 }
 
 
-.test_item_info .data .items > *
+.test_item_info .grid .info .items > *
 {
     display: flex;
     align-content: center;
@@ -2306,20 +2294,20 @@ aside .lk_menu a.active
     justify-content: space-between;
 }
 
-.test_item_info .data .items > * + *
+.test_item_info .grid .info .items > * + *
 {
     margin-top: 8px;
 }
 
 
-.test_item_info .data .items .label
+.test_item_info .grid .info .items .label
 {
     width: 142px;
     max-width: calc(100% - 32px);
 }
 
 
-.test_item_info .data .items img
+.test_item_info .grid .info .items img
 {
     display: block;
 
@@ -2327,7 +2315,7 @@ aside .lk_menu a.active
     height: 16px;
 }
 
-.test_item_info .data .items img.turn_over
+.test_item_info .grid .info .items img.turn_over
 {
     transform: rotate(180deg);
 }

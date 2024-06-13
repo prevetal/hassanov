@@ -142,30 +142,13 @@
     --------------------*/
     .test_item_info .grid .row
     {
-        margin-bottom: -16px;
-        margin-left: -13px;
-    }
-
-
-    .test_item_info .grid .row > *
-    {
-        margin-bottom: 16px;
-        margin-left: 13px;
-    }
-
-
-
-    .test_item_info .data .row
-    {
-        margin-bottom: -8px;
         margin-left: 0;
     }
 
-    .test_item_info .data .row > *
+    .test_item_info .grid .row > *
     {
         width: 100%;
         max-width: 100%;
-        margin-bottom: 8px;
         margin-left: 0;
     }
 

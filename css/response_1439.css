@@ -141,7 +141,7 @@
     }
 
 
-    .test_item_info .data .row > *
+    .test_item_info .grid .row > *
     {
         width: calc(25% - 8px);
         max-width: calc(25% - 8px);
