@@ -148,6 +148,17 @@
     }
 
 
+    .test_item_info .grid .head
+    {
+        margin-bottom: 0;
+    }
+
+    .test_item_info .grid .row > *:nth-child(2n) .head
+    {
+        margin-top: 0;
+    }
+
+
 
     /*------------
         Schema
