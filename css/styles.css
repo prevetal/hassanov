@@ -4756,6 +4756,12 @@ aside .lk_menu a.active
 }
 
 
+.pdf_export .test_item_info .grid .row > *
+{
+    width: calc(20% - 8px);
+}
+
+
 .pdf_export .schema
 {
     padding: 16px;
@@ -4766,6 +4772,14 @@ aside .lk_menu a.active
 {
     width: 100%;
     height: 2208px;
+}
+
+
+
+.pdf_export .indicators .titles,
+.pdf_export .indicators .list
+{
+    width: 100%;
 }
 
 
