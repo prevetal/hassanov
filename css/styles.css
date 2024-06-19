@@ -4739,6 +4739,37 @@ aside .lk_menu a.active
 
 
 
+/*----------------
+    PDF export
+----------------*/
+.pdf_export .content
+{
+    padding-left: 40px;
+}
+
+
+.pdf_export .test_item_info + .test_item_info,
+.pdf_export .schema,
+.pdf_export .indicators
+{
+    margin-top: 60px;
+}
+
+
+.pdf_export .schema
+{
+    padding: 16px;
+}
+
+
+.pdf_export .schema .data_wrap
+{
+    width: 100%;
+    height: 2208px;
+}
+
+
+
 /*-----------
     PopUp
 -----------*/
