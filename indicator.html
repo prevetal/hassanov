@@ -123,10 +123,30 @@
 						<div class="indicators">
 							<div class="block_title">Детальные значения показателей</div>
 
+							<form action="" class="search">
+								<input type="text" name="" value="" class="input" placeholder="Поиск анализа по наименованию или ID пользователя">
+
+								<button type="submit" class="submit_btn">
+									<svg><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+								</button>
+							</form>
+
 							<div class="titles">
-								<div class="col_id">ID</div>
-								<div class="col_name">Наименование</div>
-								<div class="col_value">Значение</div>
+								<div class="col_id sort default">
+									<span>ID</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_sort"></use></svg>
+								</div>
+
+								<div class="col_name sort default">
+									<span>Наименование</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_sort"></use></svg>
+								</div>
+
+								<div class="col_value sort default">
+									<span>Значение</span>
+									<svg class="icon"><use xlink:href="images/sprite.svg#ic_sort"></use></svg>
+								</div>
+
 								<div class="col_type"></div>
 								<div class="col_reference">Референс</div>
 								<div class="col_unit_change">Ед. изм</div>
@@ -134,12 +154,12 @@
 
 
 							<div class="list">
-								<div>
+								<div class="item">
 									<div class="col_id" data-column="ID">ORG 1</div>
 
 									<div class="col_name" data-column="Наименование">Молочная кислота</div>
 
-									<div class="col_value" data-column="Значение">12.998</div>
+									<div class="col_value" data-column="Значение">7.998</div>
 
 									<div class="col_type" data-column="Вид анализа">
 										<div class="progress">
@@ -152,30 +172,12 @@
 									<div class="col_unit_change" data-column="Ед. изм">ммоль / моль креатинина</div>
 								</div>
 
-								<div>
-									<div class="col_id" data-column="ID">ORG 1</div>
+								<div class="item">
+									<div class="col_id" data-column="ID">ORG 2</div>
 
-									<div class="col_name" data-column="Наименование">Молочная кислота</div>
+									<div class="col_name" data-column="Наименование">Аолочная кислота</div>
 
-									<div class="col_value" data-column="Значение">12.998</div>
-
-									<div class="col_type" data-column="Вид анализа">
-										<div class="progress">
-											<div class="val" style="left: 50%;"></div>
-										</div>
-									</div>
-
-									<div class="col_reference" data-column="Референс">4.081- 28.790</div>
-
-									<div class="col_unit_change" data-column="Ед. изм">ммоль / моль креатинина</div>
-								</div>
-
-								<div>
-									<div class="col_id" data-column="ID">ORG 1</div>
-
-									<div class="col_name" data-column="Наименование">Молочная кислота</div>
-
-									<div class="col_value" data-column="Значение">12.998</div>
+									<div class="col_value" data-column="Значение">4.998</div>
 
 									<div class="col_type" data-column="Вид анализа">
 										<div class="progress">
@@ -188,30 +190,12 @@
 									<div class="col_unit_change" data-column="Ед. изм">ммоль / моль креатинина</div>
 								</div>
 
-								<div>
-									<div class="col_id" data-column="ID">ORG 1</div>
+								<div class="item">
+									<div class="col_id" data-column="ID">ORG 3</div>
 
-									<div class="col_name" data-column="Наименование">Молочная кислота</div>
+									<div class="col_name" data-column="Наименование">Болочная кислота</div>
 
-									<div class="col_value" data-column="Значение">12.998</div>
-
-									<div class="col_type" data-column="Вид анализа">
-										<div class="progress">
-											<div class="val" style="left: 50%;"></div>
-										</div>
-									</div>
-
-									<div class="col_reference" data-column="Референс">4.081- 28.790</div>
-
-									<div class="col_unit_change" data-column="Ед. изм">ммоль / моль креатинина</div>
-								</div>
-
-								<div>
-									<div class="col_id" data-column="ID">ORG 1</div>
-
-									<div class="col_name" data-column="Наименование">Молочная кислота</div>
-
-									<div class="col_value" data-column="Значение">12.998</div>
+									<div class="col_value" data-column="Значение">5.998</div>
 
 									<div class="col_type" data-column="Вид анализа">
 										<div class="progress">
@@ -224,30 +208,12 @@
 									<div class="col_unit_change" data-column="Ед. изм">ммоль / моль креатинина</div>
 								</div>
 
-								<div>
-									<div class="col_id" data-column="ID">ORG 1</div>
+								<div class="item">
+									<div class="col_id" data-column="ID">ORG 4</div>
 
-									<div class="col_name" data-column="Наименование">Молочная кислота</div>
+									<div class="col_name" data-column="Наименование">Голочная кислота</div>
 
-									<div class="col_value" data-column="Значение">12.998</div>
-
-									<div class="col_type" data-column="Вид анализа">
-										<div class="progress">
-											<div class="val" style="left: 50%;"></div>
-										</div>
-									</div>
-
-									<div class="col_reference" data-column="Референс">4.081- 28.790</div>
-
-									<div class="col_unit_change" data-column="Ед. изм">ммоль / моль креатинина</div>
-								</div>
-
-								<div>
-									<div class="col_id" data-column="ID">ORG 1</div>
-
-									<div class="col_name" data-column="Наименование">Молочная кислота</div>
-
-									<div class="col_value" data-column="Значение">12.998</div>
+									<div class="col_value" data-column="Значение">6.998</div>
 
 									<div class="col_type" data-column="Вид анализа">
 										<div class="progress">
@@ -260,12 +226,48 @@
 									<div class="col_unit_change" data-column="Ед. изм">ммоль / моль креатинина</div>
 								</div>
 
-								<div>
-									<div class="col_id" data-column="ID">ORG 1</div>
+								<div class="item">
+									<div class="col_id" data-column="ID">ORG 5</div>
+
+									<div class="col_name" data-column="Наименование">Долочная кислота</div>
+
+									<div class="col_value" data-column="Значение">7.998</div>
+
+									<div class="col_type" data-column="Вид анализа">
+										<div class="progress">
+											<div class="val" style="left: 50%;"></div>
+										</div>
+									</div>
+
+									<div class="col_reference" data-column="Референс">4.081- 28.790</div>
+
+									<div class="col_unit_change" data-column="Ед. изм">Вмоль / моль креатинина</div>
+								</div>
+
+								<div class="item">
+									<div class="col_id" data-column="ID">ORG 6</div>
 
 									<div class="col_name" data-column="Наименование">Молочная кислота</div>
 
-									<div class="col_value" data-column="Значение">12.998</div>
+									<div class="col_value" data-column="Значение">8.798</div>
+
+									<div class="col_type" data-column="Вид анализа">
+										<div class="progress">
+											<div class="val" style="left: 50%;"></div>
+										</div>
+									</div>
+
+									<div class="col_reference" data-column="Референс">4.081- 28.790</div>
+
+									<div class="col_unit_change" data-column="Ед. изм">Шмоль / моль креатинина</div>
+								</div>
+
+								<div class="item">
+									<div class="col_id" data-column="ID">ORG 7</div>
+
+									<div class="col_name" data-column="Наименование">Молочная кислота</div>
+
+									<div class="col_value" data-column="Значение">8.998</div>
 
 									<div class="col_type" data-column="Вид анализа">
 										<div class="progress">
@@ -278,12 +280,12 @@
 									<div class="col_unit_change" data-column="Ед. изм">ммоль / моль креатинина</div>
 								</div>
 
-								<div>
-									<div class="col_id" data-column="ID">ORG 1</div>
+								<div class="item">
+									<div class="col_id" data-column="ID">ORG 8</div>
 
-									<div class="col_name" data-column="Наименование">Молочная кислота</div>
+									<div class="col_name" data-column="Наименование">Яолочная кислота</div>
 
-									<div class="col_value" data-column="Значение">12.998</div>
+									<div class="col_value" data-column="Значение">9.998</div>
 
 									<div class="col_type" data-column="Вид анализа">
 										<div class="progress">
@@ -296,12 +298,30 @@
 									<div class="col_unit_change" data-column="Ед. изм">ммоль / моль креатинина</div>
 								</div>
 
-								<div>
+								<div class="item">
+									<div class="col_id" data-column="ID">ORG 9</div>
+
+									<div class="col_name" data-column="Наименование">Ролочная кислота</div>
+
+									<div class="col_value" data-column="Значение">10.998</div>
+
+									<div class="col_type" data-column="Вид анализа">
+										<div class="progress">
+											<div class="val" style="left: 50%;"></div>
+										</div>
+									</div>
+
+									<div class="col_reference" data-column="Референс">4.081- 28.790</div>
+
+									<div class="col_unit_change" data-column="Ед. изм">ммоль / моль креатинина</div>
+								</div>
+
+								<div class="item">
 									<div class="col_id" data-column="ID">ORG 1</div>
 
-									<div class="col_name" data-column="Наименование">Молочная кислота</div>
+									<div class="col_name" data-column="Наименование">Колочная кислота</div>
 
-									<div class="col_value" data-column="Значение">12.998</div>
+									<div class="col_value" data-column="Значение">11.998</div>
 
 									<div class="col_type" data-column="Вид анализа">
 										<div class="progress">

@@ -96,6 +96,8 @@
 
     .search .input
     {
+        font-size: 14px;
+
         width: 24px;
 
         transition: width .2s linear;
@@ -844,6 +846,16 @@
         font-size: 28px;
 
         margin-bottom: 24px;
+    }
+
+
+    .indicators .search .input,
+    .indicators .search .input:focus
+    {
+        width: calc(100% - 40px);
+        padding: 0;
+
+        opacity: 1;
     }
 
 

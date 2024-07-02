@@ -147,14 +147,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 	// Schema
-	let scale = 1
+	let scale = 0.3
 
 	$('.schema .btns .zoom_in_btn').click(function(e) {
 		e.preventDefault()
 
 		scale = scale + 0.1
 
-		$('.schema .data').css('transform', 'scale('+ scale +')')
+		$('.schema .data').css('transform', 'translate(-50%, -50%) scale('+ scale +')')
 	})
 
 	$('.schema .btns .zoom_out_btn').click(function(e) {
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		scale = scale - 0.1
 
-		$('.schema .data').css('transform', 'scale('+ scale +')')
+		$('.schema .data').css('transform', 'translate(-50%, -50%) scale('+ scale +')')
 	})
 
 	$('.schema .btns .fullscreen_btn, .schema .btns .close_btn').click(function(e) {
@@ -177,16 +177,8 @@ document.addEventListener('DOMContentLoaded', function () {
 		mouseX, mouseY, startX, startY,
 		isDragging = false
 
-	// // Function to get the correct event coordinates (mouse or touch)
-	// function getEventCoords(e) {
-	// 	if (e.touches && e.touches.length) {
-	// 		return { x: e.touches[0].clientX, y: e.touches[0].clientY };
-	// 	} else {
-	// 		return { x: e.clientX, y: e.clientY };
-	// 	}
-	// }
 
-	// Start dragging
+		// Start dragging
 	function startDragging(e) {
 		e.preventDefault()
 
@@ -277,6 +269,113 @@ document.addEventListener('DOMContentLoaded', function () {
 
 		form.find('.input').prop('readonly', false)
 		form.find('.submit_btn').prop('disabled', false)
+	})
+
+
+	// Indicators - Sort
+	$('body').on('click', '.indicators .titles .col_id.sort', function (e) {
+		e.preventDefault()
+
+		let list = $('.indicators .list'),
+			items = list.children('.item')
+
+		$('.indicators .item').each((i, el) => $(el).css('order', 0))
+
+		if ($(this).hasClass('default')) {
+			$(this).removeClass('default')
+			$(this).addClass('up')
+
+			items.each((i, el) => $(el).css('order', parseInt($(el).find('.col_id').text().match(/\d+/)[0])))
+		} else if ($(this).hasClass('up')) {
+			$(this).removeClass('up')
+			$(this).addClass('down')
+
+			items.each((i, el) => $(el).css('order', parseInt($(el).find('.col_id').text().match(/\d+/)[0])))
+
+			$('.indicators .list').addClass('reverse')
+		} else if ($(this).hasClass('down')) {
+			$(this).removeClass('down')
+			$(this).addClass('default')
+
+			$('.indicators .list').removeClass('reverse')
+		}
+	})
+
+	$('body').on('click', '.indicators .titles .col_value.sort', function (e) {
+		e.preventDefault()
+
+		let list = $('.indicators .list'),
+			items = list.children('.item')
+
+		$('.indicators .item').each((i, el) => $(el).css('order', 0))
+
+		if ($(this).hasClass('default')) {
+			$(this).removeClass('default')
+			$(this).addClass('up')
+
+			items.each((i, el) => $(el).css('order', $(el).find('.col_value').text().replace('.', '')))
+		} else if ($(this).hasClass('up')) {
+			$(this).removeClass('up')
+			$(this).addClass('down')
+
+			items.each((i, el) => $(el).css('order', $(el).find('.col_value').text().replace('.', '')))
+
+			$('.indicators .list').addClass('reverse')
+		} else if ($(this).hasClass('down')) {
+			$(this).removeClass('down')
+			$(this).addClass('default')
+
+			$('.indicators .list').removeClass('reverse')
+		}
+	})
+
+	$('body').on('click', '.indicators .titles .col_name.sort', function (e) {
+		e.preventDefault()
+
+		let list = $('.indicators .list'),
+			items = list.find('.item'),
+			itemsArray = []
+
+		$('.indicators .item').each((i, el) => $(el).css('order', 0))
+
+		if ($(this).hasClass('default')) {
+			$(this).removeClass('default')
+			$(this).addClass('up')
+
+			items.each(function(index) {
+				let textValue = $(this).find('.col_name').text().trim().toUpperCase()
+
+				itemsArray.push({ element: $(this), value: textValue, originalIndex: index })
+			})
+
+			itemsArray.sort(function(a, b) {
+				return (a.value < b.value) ? -1 : (a.value > b.value) ? 1 : 0
+			})
+
+			itemsArray.forEach((item, index) => item.element.css('order', index + 1))
+		} else if ($(this).hasClass('up')) {
+			$(this).removeClass('up')
+			$(this).addClass('down')
+
+			items.each(function(index) {
+				let textValue = $(this).find('.col_name').text().trim().toUpperCase()
+
+				itemsArray.push({ element: $(this), value: textValue, originalIndex: index })
+			})
+
+			itemsArray.sort(function(a, b) {
+				return (a.value < b.value) ? -1 : (a.value > b.value) ? 1 : 0
+			})
+
+			itemsArray.forEach((item, index) => item.element.css('order', index + 1))
+
+			$('.indicators .list').addClass('reverse')
+		} else if ($(this).hasClass('down')) {
+			$(this).removeClass('down')
+			$(this).addClass('default')
+
+			$('.indicators .list').removeClass('reverse')
+		}
 	})
 })
 
